@@ -10,25 +10,25 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38fb4e6d-eacb-4087-a171-64f272ae1b0f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/TCell/TCell.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/TCell/TCell.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Table/Table.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Table/Table.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/constants/api.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Home/Home.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Home/Home.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/actions/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/actions/types.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/reducers/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/reducers/reducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/index.js" afterDir="false" />
+    <list default="true" id="38fb4e6d-eacb-4087-a171-64f272ae1b0f" name="Default Changelist" comment="Table is working">
+      <change afterPath="$PROJECT_DIR$/src/components/Button/Button.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Button/Button.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CellData/CellData.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CellData/CellData.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/HoverData/HoverData.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Select/Select.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Select/Select.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SelectMode/SelectMode.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SelectMode/SelectMode.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/TRow/TRow.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/constants/text.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Table/Table.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Table/Table.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Home/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Home/Home.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/Home.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/types.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/reducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,8 +76,16 @@
       <option name="presentableId" value="Default" />
       <updated>1614262422685</updated>
       <workItem from="1614262423703" duration="33000" />
-      <workItem from="1614262870673" duration="7423000" />
+      <workItem from="1614262870673" duration="12591000" />
     </task>
+    <task id="LOCAL-00001" summary="Table is working">
+      <created>1614271009640</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1614271009640</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,5 +101,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Table is working" />
+    <option name="LAST_COMMIT_MESSAGE" value="Table is working" />
   </component>
 </project>

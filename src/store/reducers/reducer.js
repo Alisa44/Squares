@@ -2,8 +2,9 @@ import {ACTIONS} from "../actions/types";
 
 const initialState = {
     modes: {},
-    currentMode: {},
+    currentMode: null,
     visitedCells: [],
+    start: false,
 }
 
 export const reducer = (state = initialState, action) => {
@@ -18,6 +19,9 @@ export const reducer = (state = initialState, action) => {
 
         case ACTIONS.SET_VISITED_CELLS:
             return {...state, visitedCells: payload}
+
+        case ACTIONS.SET_START:
+            return {...state, start: payload};
 
         default:
             return state;

@@ -4,6 +4,8 @@ import {useDispatch} from "react-redux";
 import Table from "../../components/Table/Table";
 import {getAllModes} from "../../store/actions";
 import styles from './Home.module.scss'
+import SelectMode from "../../components/SelectMode/SelectMode";
+import HoverData from "../../components/HoverData/HoverData";
 
 const Home = () => {
     const dispatch = useDispatch();
@@ -13,7 +15,11 @@ const Home = () => {
     }, [])
 
     return <div className={styles.wrapper}>
-        <Table/>
+        <div>
+            <SelectMode/>
+            <Table/>
+        </div>
+        <HoverData/>
     </div>
 }
 

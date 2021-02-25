@@ -16,6 +16,11 @@ export const setVisitedCells = cells => ({
     payload: cells
 });
 
+export const setStart = flag => ({
+    type: ACTIONS.SET_START,
+    payload: flag
+});
+
 export const getAllModes = () => dispatch => {
     getModes()
         .then(result => {
