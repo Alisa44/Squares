@@ -1,0 +1,1 @@
+export const getModesApi = 'http://demo1030918.mockable.io/';
