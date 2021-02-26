@@ -1,5 +1,5 @@
-import {ACTIONS} from "./types";
-import {getModes} from "../../utils";
+import {ACTIONS} from './types';
+import {getModes} from '../../utils';
 
 export const setModes = data => ({
     type: ACTIONS.SET_MODES,
@@ -21,6 +21,11 @@ export const setStart = flag => ({
     payload: flag
 });
 
+export const setFieldsAmount = amount => ({
+    type: ACTIONS.SET_FIELDS_AMOUNT,
+    payload: amount,
+});
+
 export const getAllModes = () => dispatch => {
     getModes()
         .then(result => {
@@ -28,7 +33,6 @@ export const getAllModes = () => dispatch => {
                 dispatch(setModes(result.data));
             }
         }).catch(e => {
-        console.log('get modes error happened', e)
-    })
-}
-
+        console.log('get modes error happened', e);
+    });
+};

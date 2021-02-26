@@ -1,53 +1,53 @@
 import React, {useState, useEffect, useCallback} from 'react';
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch, useSelector} from 'react-redux';
+
+import TCell from '../TCell/TCell';
+import {setVisitedCells} from '../../store/actions';
 import styles from './Table.module.scss';
-import {setVisitedCells} from "../../store/actions";
-import TCell from "../TCell/TCell";
 
 const Table = () => {
-    const {modes, currentMode, visitedCells, start} = useSelector(state => state.state);
+    const {visitedCells, start, fieldsAmount} = useSelector(state => state.state);
     const dispatch = useDispatch();
-    const [amount, setAmount] = useState(5);
+    const [amount, setAmount] = useState(0);
 
     useEffect(() => {
-        if (currentMode) {
-            const field = modes[currentMode].field;
-            setAmount(field);
-        }
-    }, [modes, currentMode]);
+        if (fieldsAmount) setAmount(fieldsAmount);
+    }, [fieldsAmount]);
 
-    const onMouseOver = e => {
+    const onMouseOver = useCallback(e => {
         if (start) {
             const row = e.nativeEvent.path[1].id;
             const col = e.nativeEvent.path[0].id;
-            const newCell = {row, col, id: `${row}-${col}`};
-            const newCellWasVisited = visitedCells.find(item => item.id === newCell.id);
+            if (row && col) {
+                const newCell = {row, col, id: `${row}-${col}`};
+                const newCellWasVisited = visitedCells.find(item => item.id === newCell.id);
 
-            const updatedCells = newCellWasVisited
-                ? visitedCells.filter(item => item.id !== newCell.id)
-                : [...visitedCells, newCell]
-            dispatch(setVisitedCells(updatedCells));
+                const updatedCells = newCellWasVisited
+                    ? visitedCells.filter(item => item.id !== newCell.id)
+                    : [...visitedCells, newCell];
+                dispatch(setVisitedCells(updatedCells));
+            }
         }
-    }
+    }, [start, visitedCells, dispatch]);
 
-    const getTable = useCallback((amount) => {
+    const getTable = (amount) => {
         const cells = [];
         const rows = [];
 
         for (let i = 1; i <= amount; i++) {
-            cells.push(<TCell id={i} key={i}/>)
+            cells.push(<TCell id={i} key={i}/>);
         }
         for (let i = 1; i <= amount; i++) {
-            rows.push(<tr key={i} id={i}>{cells}</tr>)
+            rows.push(<tr key={i} id={i}>{cells}</tr>);
         }
-        return <tbody>{rows}</tbody>;
-    }, []);
+        return <table className={styles.table} onMouseOver={onMouseOver}>
+            <tbody>{rows}</tbody>
+        </table>;
+    };
 
     return <div className={styles.wrapper}>
-        <table className={styles.table} onMouseOver={onMouseOver}>
-            {getTable(amount)}
-        </table>
-    </div>
-}
+        {getTable(fieldsAmount || amount)}
+    </div>;
+};
 
 export default Table;
